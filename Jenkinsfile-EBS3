@@ -4,11 +4,11 @@ pipeline {
 
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('New-docker-hup-Access')
-		AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
-   AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
-	ARTIFACT_NAME = 'Dockerrun.aws.json'
-AWS_S3_BUCKET = 'docker-jenkins-cicd'
-AWS_EB_APP_NAME = 'docker-jenkins-cicd-app'
+		AWS_ACCESS_KEY_ID=credentials('jenkins-aws-secret-key-id')
+        AWS_SECRET_ACCESS_KEY =credentials('jenkins-aws-secret-access-key')
+	    ARTIFACT_NAME = 'Dockerrun.aws.json'
+        AWS_S3_BUCKET = 'docker-jenkins-cicd'
+        AWS_EB_APP_NAME = 'docker-jenkins-cicd-app'
         AWS_EB_ENVIRONMENT_NAME = 'Dockerjenkinscicdapp-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
 	}
